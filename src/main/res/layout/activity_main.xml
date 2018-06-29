@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvFormula"
+        style="@style/Formula"
+        android:layout_width="match_parent"
+        android:layout_height="100sp" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        style="@style/Result"
+        android:layout_width="match_parent"
+        android:layout_height="100sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvFormula"
+        android:orientation="horizontal">
+
+        <GridLayout
+            android:id="@+id/glNumbers"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tvFormula"
+            android:layout_weight=".75"
+            android:columnCount="3"
+            android:rowCount="4">
+
+            <Button
+                android:id="@+id/btn7"
+                style="@style/NumberButton"
+                android:onClick="onNumberButtonClicked"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/btn8"
+                style="@style/NumberButton"
+                android:onClick="onNumberButtonClicked"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/btn9"
+                style="@style/NumberButton"
+                android:onClick="onNumberButtonClicked"
+                android:text="9" />
+
+
+            <Button
+                android:id="@+id/btn4"
+                style="@style/NumberButton"
+                android:onClick="onNumberButtonClicked"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/btn5"
+                style="@style/NumberButton"
+                android:onClick="onNumberButtonClicked"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/btn6"
+                style="@style/NumberButton"
+                android:onClick="onNumberButtonClicked"
+                android:text="6" />
+
+
+            <Button
+                android:id="@+id/btn1"
+                style="@style/NumberButton"
+                android:onClick="onNumberButtonClicked"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/btn2"
+                style="@style/NumberButton"
+                android:onClick="onNumberButtonClicked"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/btn3"
+                style="@style/NumberButton"
+                android:onClick="onNumberButtonClicked"
+                android:text="3" />
+
+
+            <Button
+                android:id="@+id/btnPoint"
+                style="@style/NumberButton"
+                android:onClick="onDotButtonClicked"
+                android:text="." />
+
+            <Button
+                android:id="@+id/btn0"
+                style="@style/NumberButton"
+                android:onClick="onNumberButtonClicked"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btnEqual"
+                style="@style/NumberButton"
+                android:onClick="onEqualButtonClicked"
+                android:text="=" />
+        </GridLayout>
+
+        <GridLayout
+            android:id="@+id/glOperations"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tvFormula"
+            android:layout_toRightOf="@id/glNumbers"
+            android:layout_weight=".25"
+            android:columnCount="1"
+            android:rowCount="5">
+
+            <Button
+                android:id="@+id/btnDelete"
+                style="@style/OperationButton"
+                android:onClick="onDeleteButtonClicked"
+                android:text="DEL" />
+
+            <Button
+                android:id="@+id/btnDivision"
+                style="@style/OperationButton"
+                android:onClick="onOperationButtonClicked"
+                android:text="÷" />
+
+            <Button
+                android:id="@+id/btnMultiplication"
+                style="@style/OperationButton"
+                android:onClick="onOperationButtonClicked"
+                android:text="x" />
+
+            <Button
+                android:id="@+id/btnSubstraction"
+                style="@style/OperationButton"
+                android:onClick="onOperationButtonClicked"
+                android:text="-" />
+
+            <Button
+                android:id="@+id/btnAddition"
+                style="@style/OperationButton"
+                android:onClick="onOperationButtonClicked"
+                android:text="+" />
+        </GridLayout>
+
+        <GridLayout
+            android:id="@+id/glOperations2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tvFormula"
+            android:layout_toRightOf="@id/glNumbers"
+            android:layout_weight=".25"
+            android:columnCount="1"
+            android:rowCount="5"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnPercentage"
+                style="@style/OperationButton"
+                android:onClick="onDeleteButtonClicked"
+                android:text="%" />
+
+            <Button
+                android:id="@+id/btnSquareRoot"
+                style="@style/OperationButton"
+                android:onClick="onOperationButtonClicked"
+                android:text="√" />
+
+            <Button
+                android:id="@+id/btnSquare2"
+                style="@style/OperationButton"
+                android:onClick="onOperationButtonClicked"
+                android:text="x²" />
+
+            <Button
+                android:id="@+id/btnSquare3"
+                style="@style/OperationButton"
+                android:onClick="onOperationButtonClicked"
+                android:text="xᶟ" />
+
+            <Button
+                android:id="@+id/btnModule"
+                style="@style/OperationButton"
+                android:onClick="onOperationButtonClicked"
+                android:text="MOD" />
+        </GridLayout>
+
+    </LinearLayout>
+</RelativeLayout>
